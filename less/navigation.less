@@ -1,8 +1,14 @@
 // Navigation code here
 
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2% 25%;
-    font-size: 1.8rem;
+nav .links {
+	.flex();
+	width: 100%;
+	padding: 2% 25%;
+	font-family: @nav-font;
+	font-weight: 600;
+
+	@media @phone {
+		width: 100%;
+		padding: 3%;
+	}
 }

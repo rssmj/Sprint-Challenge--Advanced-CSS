@@ -1,18 +1,3 @@
-.btn {
-  border: 1px solid #22283a;
-  padding: 12px;
-  border-radius: 5px;
-  background-color: #22283a;
-  color: white;
-  font-size: 2.5rem;
-  width: 120px;
-  text-align: center;
-}
-.btn:hover {
-  background-color: #515f8a;
-  color: whitesmoke;
-  transition: 0.9s;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -149,26 +134,33 @@ html {
 }
 html,
 body {
-  font-family: 'Ubuntu', sans-serif;
-  color: #5E6164;
+  font-family: "Ubuntu", sans-serif;
+  color: #5e6164;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Russo One', sans-serif;
-  color: #23293B;
+  font-family: "Russo One", sans-serif;
+  color: #23293b;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 4rem;
 }
 h3 {
   font-size: 2.8rem;
 }
 p {
-  font-size: 1.6rem;
-  line-height: 1.4;
+  font-size: 1.699rem;
+  line-height: 1.28;
+  font-weight: 600;
+}
+@media (max-width: 500px) {
+  p {
+    font-size: 1.35rem;
+    line-height: 1.35;
+  }
 }
 .container {
   max-width: 800px;
@@ -179,14 +171,22 @@ a {
   text-decoration: none;
   color: inherit;
 }
-nav {
+nav .links {
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
   padding: 2% 25%;
-  font-size: 1.8rem;
+  font-family: #454a59;
+  font-weight: 600;
+}
+@media (max-width: 500px) {
+  nav .links {
+    width: 100%;
+    padding: 3%;
+  }
 }
 footer {
-  color: #22283B;
+  color: #22283b;
   background: #f4f4f4;
   padding: 20px 0;
   border: 1px double #e0e0e0;
@@ -194,11 +194,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
 }
 .home h2 {
   display: flex;
   justify-content: center;
   padding-top: 2%;
+}
+.home .intro img {
+  width: 100%;
+  border-radius: 5px;
 }
 .home .intro h2 {
   display: flex;
@@ -212,6 +217,24 @@ footer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images .blast {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2%;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images .sky {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images .launch {
+    display: none;
+  }
 }
 .home .space-images img {
   width: 28%;
@@ -235,8 +258,23 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    padding: 3%;
+    margin: 0 auto;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+    margin: 2%;
+  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -244,12 +282,49 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
+.home .walk .walk-text .btn {
+  border: 1px solid #22283a;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #22283a;
+  color: #dee2e6;
+  font-size: 1.9rem;
+  width: 28%;
+  text-align: center;
+}
+.home .walk .walk-text .btn:hover {
+  background-color: #ffffff;
+  color: #22283a;
+  transition: 1.1s;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .home .walk .walk-text .btn:hover {
+    background-color: #ffffff;
+    color: #22283a;
+    transition: 1.1s;
+    cursor: pointer;
+  }
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
 }
-.home .walk .walk-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    margin: 2%;
+    width: 100%;
+  }
+  .home .walk .walk-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
 }

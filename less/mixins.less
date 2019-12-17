@@ -1,23 +1,23 @@
 // Mixins Here
-.btn {
-    border: 1px solid #22283a;
-    padding: 12px;
-    border-radius: 5px;
-    background-color: #22283a;
-    color: white;
-    font-size: 2.5rem;
-    width: 120px;
-    text-align: center;
+.button(@font-color, @bg-color) {
+	border: 1px solid #22283a;
+	padding: 8px;
+	border-radius: 5px;
+	background-color: @bg-color;
+	color: @font-color;
+	font-size: 1.9rem;
+	width: 28%;
+	text-align: center;
 
-    &:hover {
-        background-color: lighten(#22283a, 25%);
-        color: whitesmoke;
-        transition: 0.9s;
-    }
+	&:hover {
+		background-color: lighten(#dee2e6, 100%);
+		color: #22283a;
+		transition: 1.1s;
+		cursor: pointer;
+	}
 }
 
-.displayflex(@justify, @align) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.flex() {
+	display: flex;
+	justify-content: space-evenly;
 }
